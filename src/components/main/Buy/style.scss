@@ -1,0 +1,39 @@
+@import "~@/lib/reset.scss";
+html ,body{
+    @include overflow(auto);
+    height: auto;
+}
+.list{
+    @include rect(100%,auto);
+    // @include align-items;
+    @include background-color(#fff);  
+    @include rect(100%, auto);
+    @include overflow(hidden);
+    ul{
+        @include overflow(auto);
+        @include flexbox();
+        flex-wrap: wrap;
+        .list-item{
+            @include rect(50%, 1.5rem);
+            border:1px solid #eee;
+            @include flexbox();
+            @include flex-direction(column);
+            padding: 10px;
+            font-size: 0.1rem;
+            color:#000;
+             img{
+                 @include rect(60%, auto);
+                 margin: 0 auto;
+                //  line-height: 1rem;
+             }
+             p{
+                 @include rect(100%, 0.5rem);
+                
+             }
+             strong{
+                 font-size: 0.12rem;
+             }
+        }
+    }
+    
+}

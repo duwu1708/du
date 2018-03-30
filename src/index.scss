@@ -1,0 +1,134 @@
+@import "~@/lib/reset.scss";
+
+html, body, #root, .App{
+    @include rect(100%, auto);
+    @include overflow(auto)
+}
+
+.App{
+    @include flexbox();
+    @include flex-direction(column);
+    .container{
+        @include flex();
+        @include rect(100%, auto);
+        @include overflow(hidden);
+        .box{
+            @include rect(100, 100%);
+            @include flexbox();
+            @include flex-direction(column);
+            header{
+                @include rect(100%, 0.44rem);
+                @include background-color(#fff);
+                border-bottom: 0.01rem solid #a2a2a2;
+                .care_header{
+                    @include rect(100%,100%);
+                    @include flexbox();
+                    @include justify-content();
+                    @include align-items;
+                    padding:0 0.1rem;
+                    .care_search{
+                        @include rect(auto,0.26rem);
+                        @include flex();
+                        @include background-color(#f5f5f9);  
+                        line-height:0.26rem;
+                        color:#999;
+                        padding:0 0.1rem;
+                        font-size: 0.1rem;
+                        border-radius: 3px;
+                        letter-spacing: 1px;
+                        span{
+                            margin-right:0.05rem;
+                        }
+                    }
+                    .logo_box{
+                        @include rect(0.26rem,auto);
+                        text-align: right;
+                        .find_logo{
+                            font-size: 0.2rem;
+                            color:#55e7e7;
+                        } 
+                        .buy_logo{
+                            @include rect(0.2rem,auto);
+                            text-align: left;
+                            font-size: 0.18rem;
+                            color:#000000;
+                        }
+                        em{
+                            font-size: 0.08rem;
+                        }
+                    }
+                    
+                }
+                
+            }
+            .content{
+                @include flex();
+                @include rect(100%, auto);
+                @include overflow();
+                background: #ffffff;
+                flex-wrap:wrap;
+                //轮播
+                .lunbo_box{
+                    @include rect(100%, 1.25rem);
+                    @include overflow(hidden);
+                    .am-wingblank{
+                        margin:0;
+
+                    }
+                }
+
+                //NAV区域
+                .nav{
+                    @include rect(100%, auto);
+                    ul{
+                        @include flexbox();
+                        flex-wrap: wrap;
+                        li{
+                            @include rect(24.9%, 0.6rem);
+                            border:1px solid #00000f;
+                            @include flexbox();
+                            @include justify-content();
+                            @include align-items();
+                            @include flex-direction;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    };
+
+    footer{
+        @include rect(100%, 0.45rem);
+        @include background-color(#fff);
+        border-top:1px solid #eee;
+        ul{
+            @include rect(100%,100%);
+            @include flexbox();
+            li{
+                @include flex();
+                @include rect(auto, 100%);
+                
+                a{
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content();
+                    @include align-items();
+                    @include text-color(#999);
+                    span{
+                        @include font-size(0.2rem);
+                        }
+                        p{
+                            @include font-size(0.1rem);
+                        }
+        
+                        &.active{
+                            @include text-color(#000)
+                        }
+                }
+                
+            }
+        }
+    }
+
+}

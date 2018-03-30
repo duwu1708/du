@@ -1,0 +1,22 @@
+@import "~@/lib/reset.scss";
+
+html, body, #root, .App{
+    @include rect(100%, 100%);
+    @include overflow(hidden);
+    position: relative;
+}
+#root .App .container .box header{
+    @include rect(100%, 0.44rem);
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items();
+    @include text-color(#000);
+    z-index: 999;
+    background:rgba(0,0,0,0.8);
+    color:#f1f1f1;
+    text-align: center;
+    span{
+        @include flex();
+    }
+
+}
